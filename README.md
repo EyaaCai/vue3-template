@@ -1,4 +1,4 @@
-# Vite+Vue3+Electron+Typescript template
+# Vite+Vue3+Typescript template
 
 ## Get Started
 

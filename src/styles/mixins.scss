@@ -1,0 +1,39 @@
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin text-multi-ellipsis($line: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin clearAStyle {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+@mixin flex-center($position: y) {
+  display: flex;
+
+  @if ($position == 'x') {
+    justify-content: center;
+  }
+  @if ($position == 'y') {
+    align-items: center;
+  }
+
+  @if ($position == 'xy') {
+    align-items: center;
+    justify-content: center;
+  }
+}
